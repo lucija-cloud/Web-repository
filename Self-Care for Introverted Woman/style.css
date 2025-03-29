@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Libre Baskerville', serif; /* Changed body font */
+    font-size: 14px; /* Changed base font size */
+    line-height: 1.7; /* Reverted line height */
+    margin: 0;
+    padding: 0;
+    background-color: #FFFFFF; /* Changed background to white */
+    color: #333333; /* Changed text to dark gray */
+}
+
+h1, h2, h3 {
+    font-family: 'Lora', serif; /* Updated Font */
+    color: #6a5acd; /* Slate blue / Lavender */
+    font-weight: 600; /* Slightly bolder headings */
+}
+
+h1 { font-size: 2.5em; } /* Larger H1 */
+h2 { font-size: 1.8em; } /* Larger H2 */
+h3 { font-size: 1.4em; } /* Larger H3 */
+
+
+a {
+    color: #8a2be2; /* Blue violet */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+a:hover {
+    text-decoration: none; /* Remove underline on hover */
+    color: #6a5acd; /* Change color on hover */
+}
+
+/* Header */
+header {
+    background-color: #e6e6fa; /* Lavender */
+    padding: 1.5rem 2rem; /* Increased padding */
+    /* text-align: center; Removed for flex layout */
+    border-bottom: 1px solid #d8bfd8; /* Thistle */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+/* Container for logo and title */
+.header-title-group {
+    display: flex; /* Use flexbox for logo + title */
+    align-items: center; /* Vertically align logo and title */
+    justify-content: center; /* Center the group */
+    margin-bottom: 0.5rem; /* Space below title group */
+    width: 100%; /* Allow centering */
+}
+
+/* Style for the header logo */
+.header-logo {
+    max-height: 70px; /* Slightly smaller logo */
+    margin-right: 1.5rem; /* Increased space between logo and title */
+    /* margin-bottom removed */
+    vertical-align: middle; /* Keep for potential wrapping issues */
+}
+
+header h1 {
+    /* margin-bottom: 0.5rem; Moved to header-title-group */
+    margin-top: 0;
+    margin-bottom: 0; /* Reset bottom margin */
+    color: #483d8b; /* Dark slate blue */
+    font-weight: 700; /* Bolder site title */
+    font-size: 4em; /* Adjusted size for side-by-side layout */
+    line-height: 1.1; /* Adjust line height */
+}
+
+header p {
+    font-style: normal; /* Removed italic */
+    font-family: 'Libre Baskerville', serif; /* Match body font */
+    color: #6a5acd;
+    margin-top: 0;
+    font-size: 1.1em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem; /* Increased margin */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1.2rem; /* Increased spacing */
+}
+
+nav ul li a {
+    font-weight: 600;
+    transition: transform 0.2s ease-out; /* Add transition for hover effect */
+    display: inline-block; /* Needed for transform */
+}
+
+nav ul li a:hover {
+    transform: translateY(-2px); /* Slight lift on hover */
+    color: #483d8b; /* Darker hover color */
+}
+
+
+/* Main Content */
+main {
+    max-width: 850px; /* Slightly narrower */
+    margin: 2.5rem auto; /* Increased top/bottom margin */
+    padding: 0 1rem;
+}
+
+section {
+    background-color: #fff;
+    padding: 2rem; /* Increased padding */
+    margin-bottom: 2.5rem; /* Increased margin */
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
+    opacity: 0; /* Start hidden for animation */
+    animation: fadeIn 0.8s ease-out forwards; /* Apply fade-in animation */
+    animation-delay: 0.2s; /* Slight delay */
+}
+
+/* Stagger animation for multiple sections */
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; } /* Add more if needed */
+
+
+#latest-posts .post-preview,
+#all-articles .post-preview { /* Apply to articles page too */
+    border-bottom: 1px solid #eee; /* Lighter border */
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s ease-out, box-shadow 0.2s ease-out; /* Add transition */
+}
+
+#latest-posts .post-preview:last-child,
+#all-articles .post-preview:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+#latest-posts .post-preview:hover,
+#all-articles .post-preview:hover {
+    transform: translateY(-3px); /* Lift effect on hover */
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+
+#latest-posts h3 a,
+#all-articles h3 a { /* Apply to articles page too */
+    color: #6a5acd;
+}
+
+.read-more { /* Style the read more link */
+    display: inline-block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: #8a2be2;
+}
+
+/* Contact Form Specific Styles */
+#contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="email"],
+#contact-form textarea {
+    width: calc(100% - 20px); /* Adjust width considering padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Libre Baskerville', serif; /* Ensure form fields use body font */
+    font-size: 1rem;
+}
+
+#contact-form button[type="submit"] {
+    background-color: #6a5acd;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#contact-form button[type="submit"]:hover {
+    background-color: #483d8b; /* Darker on hover */
+    transform: translateY(-2px);
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 4rem; /* Increased margin */
+    padding: 1.5rem; /* Increased padding */
+    background-color: #e6e6fa;
+    color: #483d8b;
+    border-top: 1px solid #d8bfd8;
+    font-size: 0.95em;
+}
+
+/* Animation Definition */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Basic Responsive */
+@media (max-width: 600px) {
+    body { font-size: 16px; } /* Adjust base font for mobile */
+    h1 { font-size: 2em; }
+    h2 { font-size: 1.6em; }
+    h3 { font-size: 1.3em; }
+
+    nav ul li {
+        display: block;
+        margin: 0.8rem 0; /* Adjust mobile nav spacing */
+    }
+
+    header, main, footer {
+        padding: 1.5rem; /* Consistent padding */
+    }
+
+    main {
+        margin: 1.5rem auto;
+    }
+
+    section {
+        padding: 1.5rem;
+    }
+}
