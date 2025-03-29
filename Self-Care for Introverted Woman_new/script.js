@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             // Sample post data (replace with actual data fetching)
             const posts = [
+                { title: "How Introverted Women Can Boost Confidence Without Faking Extroversion", link: "articles/boosting-confidence-introvert.html", excerpt: "We live in a world that often seems to celebrate the loudest voice... Explore how introverted women can boost their confidence authentically..." },
+
                 { title: "The Introverted Woman's Gentle Guide to Setting Boundaries", link: "articles/setting-boundaries-guide.html", excerpt: "Learn why boundaries are vital self-care and practical ways for saying no without guilt..." }, // Added new article
                 { title: "Feeling Misunderstood? How Introverted Women Can Communicate Their Needs Effectively", link: "articles/feeling-misunderstood.html", excerpt: "Do you ever feel like you're speaking a different language? Explore why this happens and learn effective strategies..." }
                 // Removed older placeholder articles and "Finding Joy in Solitude"
