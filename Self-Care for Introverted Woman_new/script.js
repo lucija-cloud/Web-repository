@@ -12,10 +12,8 @@ document.addEventListener('DOMContentLoaded', function() {
             // Sample post data (replace with actual data fetching)
             const posts = [
                 { title: "The Introverted Woman's Gentle Guide to Setting Boundaries", link: "articles/setting-boundaries-guide.html", excerpt: "Learn why boundaries are vital self-care and practical ways for saying no without guilt..." }, // Added new article
-                { title: "Feeling Misunderstood? How Introverted Women Can Communicate Their Needs Effectively", link: "articles/feeling-misunderstood.html", excerpt: "Do you ever feel like you're speaking a different language? Explore why this happens and learn effective strategies..." },
-                { title: "Finding Joy in Solitude", link: "articles/joy-in-solitude.html", excerpt: "Explore how embracing quiet moments can recharge your energy..." },
-                { title: "Setting Gentle Boundaries", link: "articles/gentle-boundaries.html", excerpt: "Learn practical tips for protecting your peace without conflict..." }, // Note: This might be redundant now with the new guide
-                { title: "Mindful Journaling for Introverts", link: "articles/mindful-journaling.html", excerpt: "Discover journaling prompts designed for self-reflection..." }
+                { title: "Feeling Misunderstood? How Introverted Women Can Communicate Their Needs Effectively", link: "articles/feeling-misunderstood.html", excerpt: "Do you ever feel like you're speaking a different language? Explore why this happens and learn effective strategies..." }
+                // Removed older placeholder articles and "Finding Joy in Solitude"
             ];
 
             if (posts.length === 0) {
