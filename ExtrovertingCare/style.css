@@ -1,0 +1,169 @@
+/* Basic Reset & Body Styling */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-image: url('Blurry_background.jpeg'); /* Added background image */
+    background-size: cover; /* Ensure image covers the whole background */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep background fixed during scroll */
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: rgba(232, 67, 147, 0.85); /* Vibrant pink with 85% opacity */
+    color: white;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h1 .header-logo {
+    height: 1em; /* Size relative to the h1 font size */
+    width: auto;
+    margin-right: 0.5em; /* Space between logo and text */
+    vertical-align: middle; /* Align logo vertically with text */
+}
+
+header p {
+    margin: 0.5rem 0 1rem 0;
+    font-style: italic;
+}
+
+/* Navigation Styling */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #d63070; /* Slightly darker pink */
+    overflow: hidden; /* Clear floats */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block; /* Horizontal layout */
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #b8205f; /* Darker pink on hover */
+}
+
+/* Main Content Area */
+main {
+    padding: 2rem;
+    max-width: 900px;
+    margin: 2rem auto; /* Center content */
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+}
+
+main h2 {
+    color: #e84393;
+    border-bottom: 2px solid #f8a5c2; /* Lighter pink accent */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 2rem;
+}
+
+section h3 {
+    color: #d63070;
+    margin-bottom: 1rem;
+}
+
+/* Article Styling (Previews & Lists) */
+article {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+article:last-child {
+    border-bottom: none;
+}
+
+article h4 {
+    margin-bottom: 0.5rem;
+}
+
+article h4 a {
+    text-decoration: none;
+    color: #b8205f;
+    transition: color 0.3s;
+}
+
+article h4 a:hover {
+    color: #e84393;
+}
+
+/* About Page Specific */
+.about-laureta p {
+    margin-bottom: 1rem;
+}
+
+/* Contact Form Styling */
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.contact-form textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.contact-form button {
+    background-color: #e84393;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #d63070;
+}
+
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #eee;
+    color: #555;
+    font-size: 0.9em;
+}
